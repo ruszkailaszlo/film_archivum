@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Film-Archívum</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/reszletek.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <a href="mainmenu.html" class="logo"><img src="pic/logo.png">Film Archívum</a>
+    <div class="bx bx-menu" id="menu-ikon"></div>
+    <ul class="navbar">
+      <li><a href="mainmenu.html" class="active">Főoldal</a></li>
+      <li><a href="">Filmek</a></li>
+      <li><a href="">Hamarosan</a></li>
+      <li><a href="rolunk.html">Rólunk</a></li>
+    </ul>
+    <a href=" " class="button">Bejelentkezés</a>
+  </header> 
+  <div class="reszletek-container rcontainer">
+    <img src="pic/film1.jpg" alt="" class="resz-img">
+    <div class="resz-text">
+        <h2>Az ördög jobb és bal keze 1.</h2>
+
+        <div class="ertek">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star-half'></i>
+        </div>
+
+        <div class="tags">
+            <span>Vígjáték</span>
+            <span>Western</span>
+        </div>
+
+        <a href="" class="watch-button">
+            <i class='bx bx-right-arrow' ></i>
+            <span>Megnézem</span>
+        </a>
+    </div>
+  </div>
+
+  <div class="film-leiras rcontainer">
+    <h2 class="movie-title">Az ördög jobb és bal keze 1.</h2>
+    <p>A magát csak Szentléleknek nevező idegen a prérin poroszkál lovával, majd betér egy út menti ivóba, ahol rövid úton lepuffant két fejvadászt, és sebesült foglyukat magával viszi. Nemsokára egy városkába ér és meglepetten értesül róla, hogy bátyja, Bumburnyák a helyi seriff.</p>
+
+    <h2 class="szereplok-cim">Főszereplők</h2>
+    <div class="szereplok-container">
+      <div class="card">
+        <img src="pic/sz2.jpg" alt="">
+        <div class="name">Bud Spencer</div>
+      </div>
+      <div class="card">
+        <img src="pic/sz1.jpg" alt="">
+        <div class="name">Terence Hill</div>
+      </div>
+      <div class="card">
+        <img src="pic/sz3.jpg" alt="">
+        <div class="name">Riccardo Pizzuti</div>
+      </div>
+    </div>
+
+    <h2 class="link">YouTube</h2>
+    <div class="iframe-div">
+      <div class="iframe-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2Or6kPea5Zo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <section class="footer">
+    <a href="mainmenu.html" class="logo"><img src="pic/logo.png">Film Archívum</a>
+    <div class="elerhetoseg">
+      <a href=""><i class='bx bxl-facebook-circle' ></i></a>
+      <a href=""><i class='bx bxl-instagram' ></i></a>
+      <a href=""><i class='bx bxl-youtube'></i></a>
+    </div>
+  </section>
+
+  <div class="copyright">
+    <p>&#169; Film-Archívum | Minden jog fenntartva.</p>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".coming-container", {
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 55000,
+        disableOnInteraction: false,
+      },
+      centeredSlides: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+        },
+        568: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        968: {
+          slidesPerView: 5,
+        },
+      },
+    });
+
+
+    let header = document.querySelector('header');
+    let menu = document.querySelector('#menu-ikon');
+    let navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('shadow', window.scrollY > 0);
+    });
+
+    menu.onclick = () => {
+      menu.classList.toggle('bx-x');
+      navbar.classList.toggle('active');
+    };
+    window.onscroll = () => {
+    menu.classList.remove('bx-x');
+    navbar.classList.remove('active');
+    };
+</script>
+
